@@ -1,0 +1,4 @@
+pSprayFilm.C
+pSprayConservativeTemperatureFvPatchScalarField.C
+
+LIB = $(FOAM_USER_LIBBIN)/libpSprayFilmSolver

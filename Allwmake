@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -eo pipefail
+p_spray_here="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+source "$p_spray_here/env.sh"
+set -u
+p_spray_jobs="${JOBS:-2}"
+[[ "$p_spray_jobs" =~ ^[1-9][0-9]*$ ]] || { echo "JOBS must be a positive integer" >&2; exit 2; }
+mkdir -p "$FOAM_USER_LIBBIN" "$FOAM_USER_APPBIN" "$P_SPRAY_ROOT/build/logs"
+for p_spray_component in librSolutionThermo pSpraySolutionCloud pSprayFilm pSprayFilmPhaseChange pSprayFilmTransfer pSprayImplicitFilmPhaseChange pSpraySmoothFilmPhaseChange pSprayRebasedTemperature; do
+    echo "Building $p_spray_component"
+    wmake "-j$p_spray_jobs" libso "$P_SPRAY_ROOT/src/$p_spray_component" \
+        > "$P_SPRAY_ROOT/build/logs/$p_spray_component.log" 2>&1 || {
+        tail -n 35 "$P_SPRAY_ROOT/build/logs/$p_spray_component.log"; exit 1;
+    }
+done
+g++ -std=c++17 -O2 -I"$P_SPRAY_ROOT/src/librThermo" \
+    "$P_SPRAY_ROOT/src/pSprayFilmPhaseChange/table_audit.cpp" -o "$FOAM_USER_APPBIN/table_audit"
+echo "Built eight libraries and table_audit under build/."

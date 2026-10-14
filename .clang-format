@@ -1,0 +1,34 @@
+---
+BasedOnStyle: LLVM
+Language: Cpp
+IndentWidth: 4
+ContinuationIndentWidth: 4
+ColumnLimit: 100
+UseTab: Never
+BreakBeforeBraces: Allman
+NamespaceIndentation: None
+ForEachMacros:
+  - forAll
+  - forAllReverse
+  - forAllIter
+  - forAllConstIter
+AccessModifierOffset: -4
+AllowShortBlocksOnASingleLine: Never
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+BinPackArguments: false
+BinPackParameters: false
+BreakConstructorInitializers: BeforeComma
+PointerAlignment: Left
+ReferenceAlignment: Left
+DerivePointerAlignment: false
+SortIncludes: Never
+IncludeBlocks: Preserve
+ReflowComments: false
+BreakStringLiterals: false
+FixNamespaceComments: false
+SeparateDefinitionBlocks: Always
+KeepEmptyLinesAtTheStartOfBlocks: false
+IndentPPDirectives: None
+...

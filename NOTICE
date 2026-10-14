@@ -1,0 +1,15 @@
+This repository preserves OpenFOAM-derived source copyright notices and
+GPL-3.0-or-later identifiers. The complete existing OpenFOAM/GPL notice is
+provided in LICENSE and licenses/OpenFOAM-GPL-3.0.txt.
+
+CoolProp-derived thermophysical correlation code retains its original MIT
+notice in licenses/CoolProp-MIT.txt and src/librThermo/LICENSE.CoolProp.
+Its provenance is recorded in src/librThermo/PatekNative.provenance.json.
+
+The bundled thermophysical table is generated property data. Its units,
+range, model references and limitations are recorded in data/metadata.json
+and docs/物性表说明.md.
+
+The repository distributes extension source code and build/documentation
+tools for OpenFOAM Foundation 14. Runtime model validation remains the
+responsibility of each application using these extensions.

@@ -1,0 +1,14 @@
+# Build products and local tools
+/build/
+/.venv/
+/.tools/
+__pycache__/
+*.py[cod]
+**/lnInclude/
+**/Make/linux*/
+**/Make/darwin*/
+*.o
+*.so
+*.dep
+.DS_Store
+Thumbs.db

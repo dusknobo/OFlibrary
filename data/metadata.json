@@ -1,0 +1,51 @@
+{
+  "CoolProp_version": "8.0.0",
+  "solution_model": "Original Patek-Klomfar equations preserved in CoolProp source; replaces the INCOMP fitted surface for coupled calculations.",
+  "energy_cp": "derivative of the same solution enthalpy model",
+  "dimensions": [
+    76,
+    131,
+    7
+  ],
+  "columns": [
+    "rho_kg_m3",
+    "cp_J_kg_K",
+    "ln_mu_Pa_s",
+    "ln_pEq_Pa",
+    "differential_water_latent_J_kg",
+    "solution_enthalpy_J_kg",
+    "dh_dX_J_kg"
+  ],
+  "temperature_range_K": [
+    278.15,
+    353.15
+  ],
+  "LiBr_mass_fraction_range": [
+    0,
+    0.65
+  ],
+  "range_note": "Correlation grid only; this is NOT a crystallization stability envelope.",
+  "latent_method": "h_vapour - (h_solution - X*dh_solution/dX); common water reference. Independently checked against the Clapeyron relation.",
+  "enthalpy_warning": "INCOMP enthalpy reference changes with concentration; do not use differences of those values for absorption heat.",
+  "not_yet_available": [
+    "solution surface tension",
+    "mutual diffusion coefficient",
+    "crystallization boundary"
+  ],
+  "sources": [
+    "https://raw.githubusercontent.com/CoolProp/CoolProp/master/src/Backends/Incompressible/IncompressibleLibrary.cpp",
+    "https://coolprop.org/fluid_properties/Incompressibles.html",
+    "https://coolprop.org/fluid_properties/fluids/Water.html",
+    "https://doi.org/10.1016/j.ijrefrig.2005.10.007",
+    "https://link.springer.com/article/10.1007/s10765-022-03122-w",
+    "https://www.sciencedirect.com/science/article/pii/S0017931022003271"
+  ],
+  "solution_conductivity_separate_model": {
+    "source": "ASHRAE 526-RP",
+    "implementation": "src/librThermo/PSprayConductivity.H"
+  },
+  "original_generator": "scripts/build_coupled_thermo_table.py",
+  "data_file": "data/librWaterTable.dat",
+  "data_sha256": "0176d35c8c8bb3d1b02949ea16a20c056b0685d6440a1671402b854cc0a18a79",
+  "source_implementation": "src/librThermo/PatekNative.C"
+}

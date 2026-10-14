@@ -1,0 +1,6 @@
+{
+  "source_url": "https://raw.githubusercontent.com/CoolProp/CoolProp/master/src/Backends/Incompressible/IncompressibleLibrary.cpp",
+  "source_sha256": "f73886ad981832713579209e3d3b2ad4bee9c0df4924e987da3c7cccef3aa910",
+  "method": "Uncomment original LiBrSolution correlation block without altering coefficients; wrap molar-to-mass unit conversion.",
+  "original_pressure_unit": "Pa (ps_H2O already multiplies MPa by 1e6)"
+}

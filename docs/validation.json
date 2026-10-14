@@ -1,0 +1,80 @@
+{
+  "timestamp_utc": "2026-10-14T10:12:29.456272+00:00",
+  "status": "passed",
+  "repository": "dusknobo/OFlibrary",
+  "target_branch": "main",
+  "openfoam_version": "14",
+  "wm_options": "linux64GccDPInt32Opt",
+  "library_count": 8,
+  "cpp_files": 39,
+  "owned_formatted_cpp_files": 38,
+  "cpp_raw_source_hashes_match_reviewed_origin": true,
+  "all_eight_libraries_built": true,
+  "all_dependencies_found": true,
+  "no_previous_project_library_dependency": true,
+  "build_returncode": 0,
+  "format_check_passed": true,
+  "shell_and_python_syntax_passed": true,
+  "table_data_sha256": "0176d35c8c8bb3d1b02949ea16a20c056b0685d6440a1671402b854cc0a18a79",
+  "table_query_states": [
+    "313.15 0.64",
+    "287.15 0",
+    "315.15 0.64"
+  ],
+  "table_queries_match_reference": true,
+  "table_query_output": [
+    "1789.079127734838 145160.33461309996 400.17496621893622",
+    "999.20061416627641 58790.384871567541 1598.9838116936962",
+    "1788.338308155021 148645.42208455355 454.60275786438149"
+  ],
+  "libraries": {
+    "liblibrSolutionThermo.so": {
+      "sha256": "d27353558d3ebb205a9eaf57c0c0c29a3e4d5a3efb2aa9a142e398fc27f6441e",
+      "bytes": 554368,
+      "all_dependencies_found": true
+    },
+    "libpSprayFilmPhaseChange.so": {
+      "sha256": "fd417e3a76d1d74f9ac057419589e87677887293d1093a0b782ac145a01e1f70",
+      "bytes": 512816,
+      "all_dependencies_found": true
+    },
+    "libpSprayFilmSolver.so": {
+      "sha256": "128c39f99714a101dc52e2fa0fce25d61a9369f248ed4d739215d00511657e2f",
+      "bytes": 710808,
+      "all_dependencies_found": true
+    },
+    "libpSprayFilmTransfer.so": {
+      "sha256": "1d28e3c148a443b90e66c5118f1ea934de74dfdfcf4d2d8342c7125f455347fa",
+      "bytes": 609632,
+      "all_dependencies_found": true
+    },
+    "libpSprayImplicitFilmPhaseChange.so": {
+      "sha256": "ac3189196be2af073252011860f2d175b8a84f5adb5a91fc9304d9d54090e9d9",
+      "bytes": 850992,
+      "all_dependencies_found": true
+    },
+    "libpSprayRebasedTemperature.so": {
+      "sha256": "71399f3adeb7c167882909d56a8ee597d9e60804358976d259b34de17224c36c",
+      "bytes": 155336,
+      "all_dependencies_found": true
+    },
+    "libpSpraySmoothFilmPhaseChange.so": {
+      "sha256": "5bd32fb386cd117c5fc608d1bb9480ca90e02b19f0cc1366453204b70d20fcde",
+      "bytes": 850856,
+      "all_dependencies_found": true
+    },
+    "libpSpraySolutionCloud.so": {
+      "sha256": "27fbc3fc53a50161ca2000a84a433f37da6e1846a033075424653dd6ab880872",
+      "bytes": 3084112,
+      "all_dependencies_found": true
+    }
+  },
+  "compiler_warnings": [
+    {
+      "component": "pSprayFilmTransfer",
+      "message": "PSprayCloudFilmTransfer.C:91:29: warning: unused variable ‘liq’ [-Wunused-variable]"
+    }
+  ],
+  "solver_started": false,
+  "scope": "Independent source distribution, build, formatting and table checks. Not a new CFD/physical accuracy validation."
+}

@@ -1,0 +1,8 @@
+* text=auto eol=lf
+Allwmake text eol=lf
+*.sh text eol=lf
+*.C text eol=lf
+*.H text eol=lf
+*.cpp text eol=lf
+*.md text eol=lf
+*.dat text eol=lf
